@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เที่ยวสระแก้ว - แนะนำสถานที่ท่องเที่ยว</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gradient-to-br from-blue-50 to-green-50">
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold bg-gradient-to-r from-blue-600 to-green-600 bg-clip-text text-transparent">
+                        🏞️ เที่ยวสระแก้ว
+                    </h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">หน้าแรก</a>
+                    <a href="#attractions" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">สถานที่ท่องเที่ยว</a>
+                    <a href="#reviews" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">รีวิว</a>
+                    <a href="#booking" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">จอง</a>
+                    <a href="#contact" class="text-gray-700 hover:text-blue-600 font-medium transition-colors">ติดต่อ</a>
+                </nav>
+                <button class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg min-h-screen flex items-center text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-5xl md:text-6xl font-bold mb-6 drop-shadow-lg">
+                ค้นพบความงามของสระแก้ว
+            </h2>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto drop-shadow-md">
+                สัมผัสธรรมชาติอันบริสุทธิ์ น้ำตกที่สวยงาม และปราสาทหินโบราณ ในดินแดนแห่งประวัติศาสตร์
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button onclick="scrollToAttractions()" class="bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all transform hover:scale-105">
+                    🌟 เริ่มสำรวจ
+                </button>
+                <button onclick="scrollToBooking()" class="booking-btn text-white px-8 py-4 rounded-full font-semibold">
+                    🎫 จองทริปทันที
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Attractions Section -->
+    <section id="attractions" class="py-20 nature-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">สถานที่ท่องเที่ยวยอดนิยม</h3>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">ค้นพบสถานที่ท่องเที่ยวที่น่าตื่นตาตื่นใจในจังหวัดสระแก้ว</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Attraction Card 1 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80" 
+                             alt="อุทยานแห่งชาติปางสีดา" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                             onerror="this.src=''; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="h-64 bg-gradient-to-br from-green-400 to-emerald-500 flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">🌿</div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                            ⭐ 4.7
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">อุทยานแห่งชาติปางสีดา</h4>
+                        <p class="text-gray-600 mb-4">พื้นที่ป่าใหญ่ที่อุดมสมบูรณ์ แหล่งผีเสื้อที่ใหญ่ที่สุดในไทย</p>
+                        <div class="flex items-center mb-4">
+                            <div class="star-rating text-xl">★★★★★</div>
+                            <span class="ml-2 text-gray-600">(428 รีวิว)</span>
+                        </div>
+                        <button onclick="showDetails('อุทยานแห่งชาติปางสีดา')" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all">
+                            ดูเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attraction Card 2 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="น้ำตกปางสีดา" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                             onerror="this.src=''; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="h-64 bg-gradient-to-br from-blue-400 to-cyan-300 flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">💦</div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                            ⭐ 4.8
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">น้ำตกปางสีดา</h4>
+                        <p class="text-gray-600 mb-4">น้ำตกสวยกลางป่า มีน้ำไหลตลอดปี เหมาะกับพักผ่อนและถ่ายรูป</p>
+                        <div class="flex items-center mb-4">
+                            <div class="star-rating text-xl">★★★★★</div>
+                            <span class="ml-2 text-gray-600">(356 รีวิว)</span>
+                        </div>
+                        <button onclick="showDetails('น้ำตกปางสีดา')" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all">
+                            ดูเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attraction Card 3 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1548013146-72479768bada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2076&q=80" 
+                             alt="ปราสาทสด๊กก๊อกธม" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                             onerror="this.src=''; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="h-64 bg-gradient-to-br from-amber-400 to-orange-500 flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">🏯</div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                            ⭐ 4.6
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">ปราสาทสด๊กก๊อกธม</h4>
+                        <p class="text-gray-600 mb-4">โบราณสถานขอมขนาดใหญ่ที่สุดในภาคตะวันออก อายุกว่าพันปี</p>
+                        <div class="flex items-center mb-4">
+                            <div class="star-rating text-xl">★★★★★</div>
+                            <span class="ml-2 text-gray-600">(234 รีวิว)</span>
+                        </div>
+                        <button onclick="showDetails('ปราสาทสด๊กก๊อกธม')" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all">
+                            ดูเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attraction Card 4 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="ละลุ" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                             onerror="this.src=''; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="h-64 bg-gradient-to-br from-yellow-400 to-red-400 flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">🏜</div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                            ⭐ 4.5
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">ละลุ</h4>
+                        <p class="text-gray-600 mb-4">ปรากฏการณ์ธรรมชาติ คล้ายแกรนด์แคนยอนขนาดย่อม จุดถ่ายรูปสวย</p>
+                        <div class="flex items-center mb-4">
+                            <div class="star-rating text-xl">★★★★★</div>
+                            <span class="ml-2 text-gray-600">(189 รีวิว)</span>
+                        </div>
+                        <button onclick="showDetails('ละลุ')" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all">
+                            ดูเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attraction Card 5 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                             alt="วัดถ้ำเขาฉกรรจ์" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                             onerror="this.src=''; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="h-64 bg-gradient-to-br from-purple-400 to-indigo-500 flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">🏞</div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                            ⭐ 4.7
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">วัดถ้ำเขาฉกรรจ์</h4>
+                        <p class="text-gray-600 mb-4">วัดบนภูเขาหินปูน มีถ้ำและจุดชมวิว บันไดกว่า 300 ขั้น</p>
+                        <div class="flex items-center mb-4">
+                            <div class="star-rating text-xl">★★★★★</div>
+                            <span class="ml-2 text-gray-600">(298 รีวิว)</span>
+                        </div>
+                        <button onclick="showDetails('วัดถ้ำเขาฉกรรจ์')" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all">
+                            ดูเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Attraction Card 6 -->
+                <div class="bg-white rounded-2xl shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80" 
+                             alt="ตลาดโรงเกลือ" 
+                             class="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                             onerror="this.src=''; this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="h-64 bg-gradient-to-br from-pink-400 to-purple-500 flex items-center justify-center" style="display: none;">
+                            <div class="text-8xl">🛍</div>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                        <div class="absolute top-4 right-4 bg-white bg-opacity-90 px-3 py-1 rounded-full text-sm font-semibold text-gray-800">
+                            ⭐ 4.4
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-2xl font-bold text-gray-800 mb-3">ตลาดโรงเกลือ (อรัญประเทศ)</h4>
+                        <p class="text-gray-600 mb-4">ตลาดใหญ่ติดชายแดนกัมพูชา สวรรค์นักช้อป สินค้าหลากหลาย</p>
+                        <div class="flex items-center mb-4">
+                            <div class="star-rating text-xl">★★★★☆</div>
+                            <span class="ml-2 text-gray-600">(412 รีวิว)</span>
+                        </div>
+                        <button onclick="showDetails('ตลาดโรงเกลือ')" class="w-full bg-gradient-to-r from-blue-500 to-cyan-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all">
+                            ดูเพิ่มเติม
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">รีวิวจากนักท่องเที่ยว</h3>
+                <p class="text-xl text-gray-600">ฟังประสบการณ์จริงจากผู้ที่เคยมาเที่ยวสระแก้ว</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-2xl">
+                    <div class="star-rating text-2xl mb-4">★★★★★</div>
+                    <p class="text-gray-700 mb-4">"น้ำตกตาดโตนสวยมากจริงๆ น้ำใสเย็นสบาย บรรยากาศดีมาก แนะนำให้มาช่วงเช้าๆ จะได้ถ่ายรูปสวยๆ"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white font-bold">ส</div>
+                        <div class="ml-3">
+                            <p class="font-semibold">สมชาย ใจดี</p>
+                            <p class="text-sm text-gray-500">เมื่อ 2 สัปดาห์ที่แล้ว</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-6 rounded-2xl">
+                    <div class="star-rating text-2xl mb-4">★★★★☆</div>
+                    <p class="text-gray-700 mb-4">"ปราสาทสระกำแพงใหญ่เป็นสถานที่ที่น่าประทับใจ มีประวัติศาสตร์ยาวนาน ควรมีไกด์อธิบายจะดีมาก"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">น</div>
+                        <div class="ml-3">
+                            <p class="font-semibold">นิดา สวยงาม</p>
+                            <p class="text-sm text-gray-500">เมื่อ 1 เดือนที่แล้ว</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-2xl">
+                    <div class="star-rating text-2xl mb-4">★★★★★</div>
+                    <p class="text-gray-700 mb-4">"อุทยานแห่งชาติเขาอ่างฤาไนเหมาะสำหรับคนรักธรรมชาติ มีเส้นทางเดินป่าหลายระดับ วิวสวยมาก"</p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white font-bold">ก</div>
+                        <div class="ml-3">
+                            <p class="font-semibold">กิตติ ธรรมชาติ</p>
+                            <p class="text-sm text-gray-500">เมื่อ 3 สัปดาห์ที่แล้ว</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">แผนที่สถานที่ท่องเที่ยว</h3>
+                <p class="text-xl text-gray-600">ค้นหาตำแหน่งสถานที่ท่องเที่ยวในจังหวัดสระแก้ว</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="h-96 bg-gradient-to-br from-green-200 to-blue-200 flex items-center justify-center">
+                    <div class="text-center">
+                        <div class="text-6xl mb-4">🗺️</div>
+                        <p class="text-xl font-semibold text-gray-700">แผนที่ Google Maps</p>
+                        <p class="text-gray-600 mt-2">พิกัดสถานที่ท่องเที่ยวในจังหวัดสระแก้ว</p>
+                        <button onclick="openMap()" class="mt-4 bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors">
+                            เปิดแผนที่
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">จองทริปของคุณ</h3>
+                <p class="text-xl text-gray-600">เลือกแพ็คเกจท่องเที่ยวที่เหมาะกับคุณ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-8 rounded-2xl border-2 border-blue-200">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">🌊 แพ็คเกจธรรมชาติ</h4>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li>✓ น้ำตกตาดโตน</li>
+                        <li>✓ อุทยานแห่งชาติเขาอ่างฤาไน</li>
+                        <li>✓ เดินป่าและชมธรรมชาติ</li>
+                        <li>✓ รวมอาหารกลางวัน</li>
+                    </ul>
+                    <div class="text-3xl font-bold text-blue-600 mb-4">฿1,200 <span class="text-lg text-gray-500">/คน</span></div>
+                    <button onclick="bookPackage('ธรรมชาติ')" class="w-full booking-btn text-white py-3 rounded-lg font-semibold">
+                        จองทันที
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-2xl border-2 border-amber-200">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-4">🏛️ แพ็คเกจประวัติศาสตร์</h4>
+                    <ul class="text-gray-600 mb-6 space-y-2">
+                        <li>✓ ปราสาทสระกำแพงใหญ่</li>
+                        <li>✓ ปราสาทตาเมือน</li>
+                        <li>✓ วัดป่าเลไลยก์วนาราม</li>
+                        <li>✓ รวมไกด์นำเที่ยว</li>
+                    </ul>
+                    <div class="text-3xl font-bold text-amber-600 mb-4">฿1,500 <span class="text-lg text-gray-500">/คน</span></div>
+                    <button onclick="bookPackage('ประวัติศาสตร์')" class="w-full booking-btn text-white py-3 rounded-lg font-semibold">
+                        จองทันที
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-green-500 to-blue-500 p-8 rounded-2xl text-white text-center">
+                <h4 class="text-2xl font-bold mb-4">🎉 แพ็คเกจพิเศษ - ครบครัน</h4>
+                <p class="text-lg mb-4">เที่ยวครบทุกสถานที่ในจังหวัดสระแก้ว 2 วัน 1 คืน</p>
+                <div class="text-4xl font-bold mb-4">฿2,800 <span class="text-lg opacity-75">/คน</span></div>
+                <button onclick="bookPackage('ครบครัน')" class="booking-btn text-white px-8 py-4 rounded-lg font-semibold text-lg">
+                    จองแพ็คเกจพิเศษ
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-blue-50 to-green-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">ติดต่อเรา</h3>
+                <p class="text-xl text-gray-600">พร้อมให้คำปรึกษาและช่วยเหลือคุณ</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-6">ข้อมูลติดต่อ</h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-blue-500 rounded-full flex items-center justify-center text-white text-xl">📞</div>
+                            <div class="ml-4">
+                                <p class="font-semibold">โทรศัพท์</p>
+                                <p class="text-gray-600">037-123-456</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white text-xl">📧</div>
+                            <div class="ml-4">
+                                <p class="font-semibold">อีเมล</p>
+                                <p class="text-gray-600">info@sakaeotravel.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center text-white text-xl">📍</div>
+                            <div class="ml-4">
+                                <p class="font-semibold">ที่อยู่</p>
+                                <p class="text-gray-600">123 ถนนสระแก้ว อำเภอเมือง จังหวัดสระแก้ว</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-6">ส่งข้อความหาเรา</h4>
+                    <form onsubmit="sendMessage(event)" class="space-y-4">
+                        <input type="text" placeholder="ชื่อของคุณ" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <input type="email" placeholder="อีเมลของคุณ" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                        <textarea placeholder="ข้อความของคุณ" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"></textarea>
+                        <button type="submit" class="w-full bg-gradient-to-r from-blue-500 to-green-500 text-white py-3 rounded-lg font-semibold hover:from-blue-600 hover:to-green-600 transition-all">
+                            ส่งข้อความ
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h4 class="text-3xl font-bold mb-4 bg-gradient-to-r from-blue-400 to-green-400 bg-clip-text text-transparent">
+                    🏞️ เที่ยวสระแก้ว
+                </h4>
+                <p class="text-gray-400 mb-6">ค้นพบความงามของธรรมชาติและประวัติศาสตร์ในจังหวัดสระแก้ว</p>
+                <div class="flex justify-center space-x-8 text-gray-400">
+                    <span>📧 info@sakaeotravel.com</span>
+                    <span>📞 037-123-456</span>
+                    <span>🌐 www.sakaeotravel.com</span>
+                </div>
+                <div class="mt-8 pt-8 border-t border-gray-700">
+                    <p class="text-gray-500">© 2024 เที่ยวสระแก้ว. สงวนลิขสิทธิ์.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for attraction details -->
+    <div id="attractionModal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div id="modalContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'97f8823323b42705',t:'MTc1Nzk0MzM0MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
